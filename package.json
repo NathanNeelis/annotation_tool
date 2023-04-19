@@ -7,18 +7,6 @@
     "test": "test",
     "start": "node index.js"
   },
-  "builds": [
-    {
-      "src": "index.js",
-      "use": "@now/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "index.js"
-    }
-  ],
   "repository": {
     "type": "git",
     "url": "nathanneelis"
