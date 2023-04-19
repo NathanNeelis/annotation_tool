@@ -1,0 +1,32 @@
+{
+  "name": "annotation",
+  "version": "1.0.0",
+  "description": "annotation application",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "nathanneelis"
+  },
+  "author": "nathan neelis",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "compression": "^1.7.4",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "file-system": "^2.2.2",
+    "mongodb": "^5.3.0",
+    "mongoose": "^7.0.4",
+    "node-fetch": "^2.6.9",
+    "slug": "^8.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

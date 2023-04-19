@@ -1,0 +1,3 @@
+views/includes/head.ejs
+views/home.ejs
+index.js
