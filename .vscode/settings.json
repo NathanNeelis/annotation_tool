@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/9edbd381-745d-40fd-bf35-1b3bbafcbe16/resourceGroups/annotation-tool-nathanneelis/providers/Microsoft.Web/sites/annotation-tool-nathanneelis",
+  "appService.deploySubpath": "."
+}
