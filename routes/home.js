@@ -7,11 +7,9 @@ async function home(req, res) {
 
   const data = await Comment.find({});
 
-  const noSentimentData = data.filter((item) => !item.sentiment);
-
+  // change this variable per annotator
+  const noSentimentData = data.filter((item) => !item.sentiment_alb);
   const length = noSentimentData.length;
-
-  // const databaseData = await db.collection("data").find().toArray();
 
   renderPage(noSentimentData[0]);
 

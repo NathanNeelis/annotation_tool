@@ -2,15 +2,11 @@ const Comment = require("../models/comment");
 
 // save activity to database
 async function updateComment(req, res, next) {
-  const data = await Comment.find({
-    id: req.body.id,
-  });
-
   await Comment.findOneAndUpdate(
     { id: req.body.id },
     {
-      annotator: req.body.name,
-      sentiment: req.body.sentiment,
+      annotator_alb: req.body.name,
+      sentiment_alb: req.body.sentiment,
     },
     { upsert: true }
   );
