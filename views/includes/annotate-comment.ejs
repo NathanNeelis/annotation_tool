@@ -1,0 +1,38 @@
+<div class="commentWrapper">
+  <!-- subreddit  -->
+  <div class="subreddit"><p><%=comments.subreddit %></p></div>
+
+  <!-- comment / body  -->
+  <div class="comment">
+    <p><%=comments.body %></p>
+  </div>
+
+  <input type="hidden" id="id" name="id" value="<%=comments.id %>" required />
+
+  <div class="annWrapper">
+    <!-- sentiment -->
+    <div class="annotation">
+      <input
+        type="radio"
+        id="stress-inducing"
+        name="stressfactor"
+        value="stress-inducing"
+      />
+      <label for="positive">stress-inducing</label>
+      <input
+        type="radio"
+        id="stress-reducing"
+        name="stressfactor"
+        value="stress-reducing"
+      />
+      <label for="negative">stress-reducing</label>
+      <input
+        type="radio"
+        id="not-identifiable"
+        name="stressfactor"
+        value="not identifiable"
+      />
+      <label for="neutral">not identifiable</label>
+    </div>
+  </div>
+</div>

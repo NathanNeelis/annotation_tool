@@ -16,6 +16,7 @@ const home = require("./routes/home");
 const instructions = require("./routes/instructions");
 const id = require("./routes/id");
 const annotate = require("./routes/annotate");
+const getID = require("./routes/getID");
 
 app
   .use(express.static(path.resolve("public")))
@@ -31,7 +32,9 @@ app
   .get("/instructions", instructions)
   .get("/abc", id);
 
-app.post("/", annotate);
+app
+  .post("/", annotate)
+  .post("/instructions", getID);
 
 app.listen(port, () => {
   console.log(`Server is working at http://localhost:${port}`);

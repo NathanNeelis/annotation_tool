@@ -1,4 +1,4 @@
-const getData = require("../utils/getData");
+// const getData = require("../utils/getData");
 const Comment = require("../models/comment");
 
 // export
@@ -8,10 +8,10 @@ async function id(req, res) {
   const data = await Comment.find({});
 
   // change this variable per annotator
-  const noSentimentData = data.filter((item) => !item.sentiment_ano);
+  const noSentimentData = data.filter((item) => !item.stressfactor);
   const length = noSentimentData.length;
 
-  renderPage(noSentimentData[0]);
+  renderPage(noSentimentData);
 
   function renderPage(noSentimentData) {
     // console.log("this is all data", allData);

@@ -13,31 +13,23 @@ const annotation = new mongoose.Schema({
     type: String,
     required: true,
   },
-  annotator_alb: {
+  annotator: {
     type: String,
     required: false,
   },
-  annotator_ano: {
+  annotator_researcher: {
     type: String,
     required: false,
   },
-  annotator_suz: {
+  stressfactor: {
     type: String,
     required: false,
   },
-  sentiment_alb: {
-    type: String,
-    required: false,
-  },
-  sentiment_ano: {
-    type: String,
-    required: false,
-  },
-  sentiment_suz: {
+  stressfactor_researcher: {
     type: String,
     required: false,
   },
 });
 
-const Comment = mongoose.model("annotations", annotation);
+const Comment = mongoose.model("stressfactors", annotation);
 module.exports = Comment;
