@@ -31,5 +31,5 @@ const annotation = new mongoose.Schema({
   },
 });
 
-const Comment = mongoose.model("stressfactors", annotation);
+const Comment = mongoose.model("abcs", annotation);
 module.exports = Comment;

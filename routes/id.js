@@ -11,7 +11,7 @@ async function id(req, res) {
   const noSentimentData = data.filter((item) => !item.stressfactor);
   const length = noSentimentData.length;
 
-  renderPage(noSentimentData);
+  renderPage(noSentimentData[0]);
 
   function renderPage(noSentimentData) {
     // console.log("this is all data", allData);

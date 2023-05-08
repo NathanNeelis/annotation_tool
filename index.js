@@ -33,7 +33,7 @@ app
   .get("/abc", id);
 
 app
-  .post("/", annotate)
+  .post("/abc", annotate)
   .post("/instructions", getID);
 
 app.listen(port, () => {
