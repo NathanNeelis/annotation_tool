@@ -13,6 +13,8 @@ connectMDB(); // connect with database
 
 // Routes
 const home = require("./routes/home");
+const instructions = require("./routes/instructions");
+const id = require("./routes/id");
 const annotate = require("./routes/annotate");
 
 app
@@ -25,7 +27,9 @@ app
   );
 
 app
-  .get("/", home);
+  .get("/", home)
+  .get("/instructions", instructions)
+  .get("/abc", id);
 
 app.post("/", annotate);
 

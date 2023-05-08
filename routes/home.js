@@ -5,20 +5,17 @@ const Comment = require("../models/comment");
 async function home(req, res) {
   // const data = await getData(endpoint);
 
-  const data = await Comment.find({});
+  // const data = await Comment.find({});
 
-  // change this variable per annotator
-  const noSentimentData = data.filter((item) => !item.sentiment_alb);
-  const length = noSentimentData.length;
+  // // change this variable per annotator
+  // const noSentimentData = data.filter((item) => !item.sentiment_ano);
+  // const length = noSentimentData.length;
 
-  renderPage(noSentimentData[0]);
+  // renderPage(noSentimentData[0]);
 
-  function renderPage(noSentimentData) {
+  function renderPage() {
     // console.log("this is all data", allData);
-    res.render("home.ejs", {
-      comments: noSentimentData,
-      length: length,
-    });
+    res.render("home.ejs", {});
   }
 }
 

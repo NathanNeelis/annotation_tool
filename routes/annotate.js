@@ -5,8 +5,8 @@ async function updateComment(req, res, next) {
   await Comment.findOneAndUpdate(
     { id: req.body.id },
     {
-      annotator_alb: req.body.name,
-      sentiment_alb: req.body.sentiment,
+      annotator_ano: req.body.name,
+      sentiment_ano: req.body.sentiment,
     },
     { upsert: true }
   );

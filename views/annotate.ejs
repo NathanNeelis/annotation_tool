@@ -1,0 +1,61 @@
+<%- include('includes/head.ejs'); %>
+
+
+    <h1>annotating comments left: <%=length %></h1>
+
+    <% if (length >= 1) { %>
+
+      <form class="wrapper" action="/" method="POST" id="annotate_form_<%= comments.id %>">
+        <div>
+          <!-- annotator  -->
+          <div class="annotater">
+            <label for="name">Naam:</label>
+            <input type="text" id="name" name="name" value="Anouk" required>
+          </div>
+          
+          <!-- subreddit  -->
+          <div class="subreddit"><p><%=comments.subreddit %></p></div>
+          
+          <!-- comment / body  -->
+          <div class="comment">
+            <p>
+              <%=comments.body %>
+            </p>
+          </div>
+
+          <input type="hidden" id="id" name="id" value="<%=comments.id %>"  required>
+
+          <div class="annWrapper">
+               <!-- sentiment -->
+            <div class="annotation">
+
+              <input type="radio" id="positive" name="sentiment" value="positive">
+              <label for="positive">positive</label>
+              <input type="radio" id="negative" name="sentiment" value="negative">
+              <label for="negative">negative</label>
+              <input type="radio" id="neutral" name="sentiment" value="neutral">
+              <label for="neutral">neutral</label>
+  
+            </div>
+
+            <button form="annotate_form_<%= comments.id %>" type="submit" class="submitBtn">
+              next
+            </button>
+          </div>
+       
+
+
+        </div>
+
+
+      </form>
+
+
+      <%} else { %>
+        <h2>You're done!</h2>
+        <p> No comments left to annotate</p>
+        <% } %>
+
+        <script src="js/consent.js"></script>
+  </body>
+</html>

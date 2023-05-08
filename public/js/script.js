@@ -1,13 +1,20 @@
-const naam = document.querySelector("#name");
+console.log(window.location.pathname);
 
-naam.addEventListener("input", (event) => {
-  setName = naam.value;
+const consentButton = document.querySelector(".consentBtn");
 
-  localStorage.setItem("name", setName);
+consentButton.addEventListener("click", (event) => {
+  localStorage.setItem("consent", true);
 });
 
-const getName = localStorage.getItem("name");
+const path = window.location.pathname;
+const consent = localStorage.getItem("consent");
 
-if (getName) {
-  naam.value = getName;
+if (path === "/") {
+  console.log("match");
+  if (consent) {
+    console.log("There is a consent");
+    window.location.href = "/instructions";
+  } else {
+    console.log("There is no consent");
+  }
 }
