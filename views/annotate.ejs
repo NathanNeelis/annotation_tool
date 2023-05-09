@@ -1,8 +1,22 @@
 <%- include('includes/head.ejs'); %>
 
+
   <div class="headerTopics">
-    <h1>Topic 1</h1>
+
+      <h1>Topic 1</h1>
+      <p>Comments left: <%=length %></p>
+
+
+    <div class="showInstructions">
+      Instructions
+    </div>
   </div>
+
+  <div class="instructionsPopup hidden">
+    <%- include('includes/instructions-popup.ejs'); %>
+  </div>
+
+
   
     <% if (length >= 1) { %>
 
@@ -22,7 +36,7 @@
         type="submit"
         class="submitBtn"
       >
-        next topic
+        next comment
       </button>
 
       </form>
@@ -34,5 +48,6 @@
         <% } %>
 
         <script src="js/consent.js"></script>
+        <script src="js/detailpage.js"></script>
   </body>
 </html>
