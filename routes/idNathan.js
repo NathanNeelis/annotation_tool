@@ -2,7 +2,7 @@
 const Comment = require("../models/comment");
 
 // export
-async function id(req, res) {
+async function idNathan(req, res) {
   // const data = await getData(endpoint);
 
   const data = await Comment.find({});
@@ -22,4 +22,4 @@ async function id(req, res) {
   }
 }
 
-module.exports = id;
+module.exports = idNathan;

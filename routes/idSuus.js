@@ -2,13 +2,13 @@
 const Comment = require("../models/comment");
 
 // export
-async function id(req, res) {
+async function idSuus(req, res) {
   // const data = await getData(endpoint);
 
   const data = await Comment.find({});
 
   // change this variable per annotator
-  const noSentimentData = data.filter((item) => !item.stressfactor_researcher);
+  const noSentimentData = data.filter((item) => !item.stressfactor);
   const length = noSentimentData.length;
 
   renderPage(noSentimentData[0]);
@@ -22,4 +22,4 @@ async function id(req, res) {
   }
 }
 
-module.exports = id;
+module.exports = idSuus;

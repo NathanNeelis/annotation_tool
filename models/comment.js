@@ -1,3 +1,4 @@
+const { Int32 } = require("mongodb");
 const mongoose = require("mongoose");
 
 const annotation = new mongoose.Schema({
@@ -12,6 +13,10 @@ const annotation = new mongoose.Schema({
   body: {
     type: String,
     required: true,
+  },
+  top_weighted_topic: {
+    type: Number,
+    required: false,
   },
   annotator: {
     type: String,
@@ -31,5 +36,5 @@ const annotation = new mongoose.Schema({
   },
 });
 
-const Comment = mongoose.model("abcs", annotation);
+const Comment = mongoose.model("stressfactors", annotation);
 module.exports = Comment;

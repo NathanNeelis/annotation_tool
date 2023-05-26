@@ -3,7 +3,7 @@
 
   <div class="headerTopics">
 
-      <h1>Topic 1</h1>
+      <h1>Topic <%=comments.top_weighted_topic %></h1>
       <p>Comments left: <%=length %></p>
 
 
@@ -24,7 +24,7 @@
         <div>
           <!-- annotator  -->
           <div class="annotater">
-            <input type="hidden" id="annotaterID" name="annotaterID" value="abc" required>
+            <input type="hidden" id="annotaterID" name="annotaterID" value="Nathan" required>
           </div>
           
           <%- include('includes/annotate-comment.ejs'); %>

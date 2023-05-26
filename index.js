@@ -15,7 +15,10 @@ connectMDB(); // connect with database
 const home = require("./routes/home");
 const instructions = require("./routes/instructions");
 const id = require("./routes/id");
+const idNathan = require("./routes/idNathan");
+const idSuus = require("./routes/idSuus");
 const annotate = require("./routes/annotate");
+const annotateRes = require("./routes/annotateRes");
 const getID = require("./routes/getID");
 
 app
@@ -30,10 +33,14 @@ app
 app
   .get("/", home)
   .get("/instructions", instructions)
+  .get("/suus", idSuus)
+  .get("/nathan", idNathan)
   .get("/abc", id);
 
 app
-  .post("/abc", annotate)
+  .post("/abc", annotateRes)
+  .post("/suus", annotate)
+  .post("/nathan", annotateRes)
   .post("/instructions", getID);
 
 app.listen(port, () => {

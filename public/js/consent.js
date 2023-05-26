@@ -2,6 +2,7 @@ const consentButton = document.querySelector(".consentBtn");
 
 consentButton.addEventListener("click", (event) => {
   localStorage.setItem("consent", true);
+  window.location.href = "/instructions";
 });
 
 const consent = localStorage.getItem("consent");
