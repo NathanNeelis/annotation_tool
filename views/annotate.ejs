@@ -20,11 +20,11 @@
   
     <% if (length >= 1) { %>
 
-      <form class="wrapper" action="/abc" method="POST" id="annotate_form_<%= comments.id %>">
+      <form class="wrapper" action="/nathan" method="POST" id="annotate_form_<%= comments.id %>">
         <div>
           <!-- annotator  -->
           <div class="annotater">
-            <input type="hidden" id="annotaterID" name="annotaterID" value="Nathan" required>
+            <input type="hidden" id="annotaterID" name="annotaterID" value="nathan" required>
           </div>
           
           <%- include('includes/annotate-comment.ejs'); %>

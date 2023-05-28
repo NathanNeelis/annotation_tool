@@ -33,13 +33,13 @@ app
 app
   .get("/", home)
   .get("/instructions", instructions)
-  .get("/suus", idSuus)
+  .get("/rkiai", idSuus)
   .get("/nathan", idNathan)
   .get("/abc", id);
 
 app
   .post("/abc", annotateRes)
-  .post("/suus", annotate)
+  .post("/rkiai", annotate)
   .post("/nathan", annotateRes)
   .post("/instructions", getID);
 
